@@ -1,0 +1,19 @@
+@mixin h4($font-family){
+    position: relative;
+    top:22px;
+    width: 127px;
+    height: 22px;
+    left: 92px;
+    top: 22px;
+
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height, or 138% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
