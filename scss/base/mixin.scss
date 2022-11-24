@@ -1,0 +1,177 @@
+
+@mixin circle ($color){
+
+    width: 62.71px;
+    height: 62.71px;
+    border-radius:50%;
+    left: 21.73px;
+    top: 0px;
+    margin-left: 150px;
+    margin-top: 25px;
+    background: $color;
+}
+
+@mixin numbers{
+    width: 117px;
+    height: 24px;
+    left: 0px;
+    top: 76.89px;
+    margin-left: 129px;
+    margin-top: 14px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    text-align: center;
+    letter-spacing: 5.96px;
+
+    color: #000000;
+}
+
+@mixin phrase{
+    display: inline-block;
+    width: 95px;
+    height: 20px;
+    left: 11.15px;
+    top: 120px;
+    margin-left: 140px;
+    margin-top: 19px;
+    margin-bottom: 50px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    /* identical to box height, or 118% */
+
+    text-align: center;
+
+    color: #A5A5A5;
+}
+@mixin mytitle($width,$height,$top){
+    width: $width;
+    height: $height;
+    top: $top;
+    left: 22px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+}
+
+@mixin lorem($height,$top,$line-height){
+    width: 272px;
+    height:$height;
+    left: 21px;
+    top: $top;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: $line-height;
+    color: #000000;
+}
+
+@mixin benefits{
+    width: 314px;
+    height: 370px;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    margin:42px auto;
+    top: 42px;
+    background: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+
+    &__background{
+        display: inline-block;
+        width: 90.12px;
+        height: 90.12px;
+        left: 0px;
+        top: 63.72px;
+
+        background: #FB3B64;
+        border-radius: 41px;
+        transform: rotate(-45deg);
+    }
+    &__background2{
+        position: relative;
+        display: inline-block;
+        width: 131.88px;
+        height: 131.7px;
+        border-radius:50%;
+        left: auto;
+        right:90px;
+        top: 12px;
+        background: #08A6E4;
+    }
+    &__container{
+        position: relative;
+        top: 70px;
+        left: 22px;
+    }
+    &__mytitle1{
+        @include mytitle (198px,72px,174px)
+    } 
+    &__mytitle2{
+        @include mytitle (218px,70px,180px)
+   }
+    
+    &__lorem1{
+        @include lorem (84px,256px,21px)
+    }
+    &__lorem2{
+        @include lorem (84px,268px,19px)
+        
+    }
+
+}
+
+@mixin benefits3 {
+    position: relative;
+    width: 314px;
+    height: 298px;
+    left: 30px;
+    top: 42px;
+
+    background: #FFFFFF;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+
+    &__mytitle3{
+        @include mytitle( 274px,109px,31px);
+        position: relative;
+    }
+    &__lorem3{
+        @include lorem(114px,160px,22px);
+        padding-right: 20px;
+        margin-left: 22px;
+        margin-top: 50px;
+    }
+}
+@mixin rectanglecolor{
+    width: 314px;
+    height: 195px;
+    left: 11.69px;
+    top: 291px;
+    margin-top: 42px;
+    margin-left: 30px;
+    background: #55DFB4;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+
+    img{
+        width: 295.73px;
+        height: 207.72px;
+        left: 0px;
+        top: 315.64px;
+        margin-top: 24px;
+    }
+}

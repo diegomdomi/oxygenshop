@@ -1,0 +1,18 @@
+@mixin title{
+    position: relative;
+    top: 120px;
+    width: 308px;
+    height: 57px;
+    margin-left: 34px;
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+/* or 144% */
+
+    text-align: center;
+
+    color: #000000;
+}

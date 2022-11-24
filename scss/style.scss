@@ -1,7 +1,13 @@
 @import "base/fonts";
 @import "base/h1";
 @import "base/h2";
+@import "base/maintitle";
 @import "base/h4";
+@import "base/mixin";
+@import "base/section";
+@import "base/macbook";
+@import "base/iphone";
+
 
 * {
     box-sizing: border-box;
@@ -27,7 +33,7 @@ body {
     display: inline;
      
     }
-    &__menu img{
+    img{
         width: 20px;
         height: 12px;
         left: 325px;
@@ -47,24 +53,13 @@ h2{
 h4{
     @include h4(OpenSans)
 }
-p{
-    position: relative;
-    top: 120px;
-    width: 308px;
-    height: 57px;
-    margin-left: 34px;
 
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 23px;
-/* or 144% */
-
-    text-align: center;
-
-    color: #000000;
+.main{
+  &__title{
+    @include title;
+  } 
 }
+
 .btn{
     width: 310px;
     height: 67px;
@@ -82,7 +77,7 @@ p{
     height: 267px;
     left: -201.5px;
     top: 434px;
-    margin-top: 51px;
+    margin-top:51px;
 }
 
 h3{
@@ -106,88 +101,49 @@ h3{
 }
 
 .circle1{
-    width: 62.71px;
-    height: 62.71px;
-    border-radius:50%;
-    left: 21.73px;
-    top: 0px;
-    margin-left: 150px;
-    margin-top: 25px;
-    background: #FB3B64;
+  @include circle(#FB3B64);
+  img{
+    margin-left: 30px;
+
+  }
 }
 
-.circle1 img{
-    margin-left: 30px;
-}
+
 
 .numbers{
-    width: 117px;
-    height: 24px;
-    left: 0px;
-    top: 76.89px;
-    margin-left: 129px;
-    margin-top: 14px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 24px;
-    /* identical to box height, or 120% */
-
-    text-align: center;
-    letter-spacing: 5.96px;
-
-    color: #000000;
+    @include numbers;
 }
 
-.daily{
-    display: inline-block;
-    width: 95px;
-    height: 20px;
-    left: 11.15px;
-    top: 120px;
-    margin-left: 140px;
-    margin-top: 19px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    /* identical to box height, or 118% */
-
-    text-align: center;
-
-    color: #A5A5A5;
+.phrase{
+    @include phrase;
 }
 
 .circle2{
-    width: 63px;
-    height: 63px;
-    left: 57px;
-    top: 0px;
-    border-radius:50%;
-    margin-left: 150px;
-    margin-top: 25px;
-    background: #08A6E4;
+ @include circle(#08A6E4);
+    img{
+        margin-left: 30px;
+        margin-top: 14px;
+    }
 }
-.circle2 img{
-    margin-left: 30px;
-    margin-top: 14px;
-}
+
 
 .circle3{
-    width: 62.71px;
-    height: 62.71px;
-    left: 50.66px;
-    top: 25px;
-    
-    border-radius:50%;
-    margin-left: 150px;
-    margin-top: 25px;
-    background: #55DFB4;
-}
-
-.circle3 img{
+   @include circle(#55DFB4);
+   img{
     margin-left: 31px;
     margin-top: 6px;
+   }
+}
+
+
+.benefits{
+    @include benefits;
+}
+
+.benefits3{
+    @include benefits3
+}
+
+.rectanglecolor{
+    @include rectanglecolor
 }

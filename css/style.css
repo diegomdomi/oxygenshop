@@ -8,6 +8,27 @@
   src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
   font-display: swap; }
 
+.section {
+  width: 375px;
+  height: 1395.66px;
+  background: #F7F7F7; }
+
+.macbook {
+  position: relative;
+  margin: auto;
+  top: 37px;
+  left: 55px;
+  z-index: 1; }
+
+.iphone {
+  position: relative;
+  margin: auto;
+  width: 175px;
+  height: 134.99px;
+  left: 90px;
+  top: 19.01px;
+  z-index: 1; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,7 +46,7 @@ body {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29); }
   .nav__menu {
     display: inline; }
-  .nav__menu img {
+  .nav img {
     width: 20px;
     height: 12px;
     left: 325px;
@@ -76,7 +97,7 @@ h4 {
   text-align: center;
   color: #FFFFFF; }
 
-p {
+.main__title {
   position: relative;
   top: 120px;
   width: 308px;
@@ -134,9 +155,8 @@ h3 {
   margin-left: 150px;
   margin-top: 25px;
   background: #FB3B64; }
-
-.circle1 img {
-  margin-left: 30px; }
+  .circle1 img {
+    margin-left: 30px; }
 
 .numbers {
   width: 117px;
@@ -155,7 +175,7 @@ h3 {
   letter-spacing: 5.96px;
   color: #000000; }
 
-.daily {
+.phrase {
   display: inline-block;
   width: 95px;
   height: 20px;
@@ -163,6 +183,7 @@ h3 {
   top: 120px;
   margin-left: 140px;
   margin-top: 19px;
+  margin-bottom: 50px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
@@ -173,29 +194,159 @@ h3 {
   color: #A5A5A5; }
 
 .circle2 {
-  width: 63px;
-  height: 63px;
-  left: 57px;
-  top: 0px;
+  width: 62.71px;
+  height: 62.71px;
   border-radius: 50%;
+  left: 21.73px;
+  top: 0px;
   margin-left: 150px;
   margin-top: 25px;
   background: #08A6E4; }
-
-.circle2 img {
-  margin-left: 30px;
-  margin-top: 14px; }
+  .circle2 img {
+    margin-left: 30px;
+    margin-top: 14px; }
 
 .circle3 {
   width: 62.71px;
   height: 62.71px;
-  left: 50.66px;
-  top: 25px;
   border-radius: 50%;
+  left: 21.73px;
+  top: 0px;
   margin-left: 150px;
   margin-top: 25px;
   background: #55DFB4; }
+  .circle3 img {
+    margin-left: 31px;
+    margin-top: 6px; }
 
-.circle3 img {
-  margin-left: 31px;
-  margin-top: 6px; }
+.benefits {
+  width: 314px;
+  height: 370px;
+  left: 0px;
+  top: 0px;
+  position: relative;
+  margin: 42px auto;
+  top: 42px;
+  background: #FFFFFF;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px; }
+  .benefits__background {
+    display: inline-block;
+    width: 90.12px;
+    height: 90.12px;
+    left: 0px;
+    top: 63.72px;
+    background: #FB3B64;
+    border-radius: 41px;
+    transform: rotate(-45deg); }
+  .benefits__background2 {
+    position: relative;
+    display: inline-block;
+    width: 131.88px;
+    height: 131.7px;
+    border-radius: 50%;
+    left: auto;
+    right: 90px;
+    top: 12px;
+    background: #08A6E4; }
+  .benefits__container {
+    position: relative;
+    top: 70px;
+    left: 22px; }
+  .benefits__mytitle1 {
+    width: 198px;
+    height: 72px;
+    top: 174px;
+    left: 22px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000; }
+  .benefits__mytitle2 {
+    width: 218px;
+    height: 70px;
+    top: 180px;
+    left: 22px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000; }
+  .benefits__lorem1 {
+    width: 272px;
+    height: 84px;
+    left: 21px;
+    top: 256px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000; }
+  .benefits__lorem2 {
+    width: 272px;
+    height: 84px;
+    left: 21px;
+    top: 268px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000; }
+
+.benefits3 {
+  position: relative;
+  width: 314px;
+  height: 298px;
+  left: 30px;
+  top: 42px;
+  background: #FFFFFF;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px; }
+  .benefits3__mytitle3 {
+    width: 274px;
+    height: 109px;
+    top: 31px;
+    left: 22px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    position: relative; }
+  .benefits3__lorem3 {
+    width: 272px;
+    height: 114px;
+    left: 21px;
+    top: 160px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    padding-right: 20px;
+    margin-left: 22px;
+    margin-top: 50px; }
+
+.rectanglecolor {
+  width: 314px;
+  height: 195px;
+  left: 11.69px;
+  top: 291px;
+  margin-top: 42px;
+  margin-left: 30px;
+  background: #55DFB4;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px; }
+  .rectanglecolor img {
+    width: 295.73px;
+    height: 207.72px;
+    left: 0px;
+    top: 315.64px;
+    margin-top: 24px; }
