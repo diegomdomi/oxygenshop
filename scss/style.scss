@@ -87,15 +87,39 @@ h4{
     h2{
         @include pricetitle
     }
-    &__basic{
-        @include basic
+    &__basic1{
+        @include basic(#FB3B64,293px,251px)
     }
+    &__basic2{
+        @include basic(#07ACE6,339px,277px);
+        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+        left:18px;
+      
+    }
+    
+    &__basic3{
+        @include basic( #55DFB4,293px,251px)
+    }
+
     .basic_title{
         @include basictitle;
-        &__amount{
-            @include basicamount
+        &__amount1{
+            @include basicamount(#FB3B64)
+        }
+        &__amount2{
+            @include basicamount(#07ACE6);
+        }
+        &__amount3{
+            @include basicamount(#55DFB4)
         }
         
+    }
+    .basic_title2{
+        @include basictitle;
+        left:30px;
+    }
+    .small{
+        @include small
     }
    
     .container-list{
@@ -104,14 +128,24 @@ h4{
             @include container-list-ul;
         }
         .list{
-            @include list
+            @include list;
+          
         }
 
     }
-    &__btnbegin{
-        @include pricebtnbegin
+    &__btnbegin1{
+        @include pricebtnbegin(#FB3B64)
     }
-        &__p{
-            @include priceparagraph
-        }
+    &__btnbegin2{
+        @include pricebtnbegin(#07ACE6);
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        bottom: 10px;
+        left: 90px;
+    }
+    &__btnbegin3{
+        @include pricebtnbegin(#55DFB4)
+    }
+    &__p{
+        @include priceparagraph
+    }
 }
