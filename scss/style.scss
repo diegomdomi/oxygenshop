@@ -1,12 +1,17 @@
 @import "base/fonts";
+@import "base/nav";
 @import "base/h1";
 @import "base/h2";
+@import "base/h3";
+@import "base/btn";
+@import "base/imgbackground";
 @import "base/maintitle";
 @import "base/h4";
 @import "base/mixin";
 @import "base/section";
 @import "base/macbook";
 @import "base/iphone";
+@import "base/price";
 
 
 * {
@@ -17,30 +22,6 @@
 
 body {
    min-width: 320px;
-}
-
-.nav{
-
-    width: 375px;
-    height: 70px;
-    left: 0px;
-    top: 0px;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
-    
-    &__menu{
-    display: inline;
-     
-    }
-    img{
-        width: 20px;
-        height: 12px;
-        left: 325px;
-        top: 29px;
-        margin-left: 94px;
-        margin-top: 34px;
-    }
 }
 
 h1 {
@@ -60,55 +41,12 @@ h4{
   } 
 }
 
-.btn{
-    width: 310px;
-    height: 67px;
-    left: 0px;
-    top: 0px;
-    margin-top: 148px;
-    margin-left: 33px;
-    background: #08A6E4;
-    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-    border-radius: 40px;
-}
-
-.background{
-    width: 779px;
-    height: 267px;
-    left: -201.5px;
-    top: 434px;
-    margin-top:51px;
-}
-
-h3{
-    width: 303px;
-    height: 112px;
-    left: 36px;
-    top: 714px;
-    margin-top: 13px;
-    margin-left: 36px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 35px;
-    /* or 117% */
-    
-    text-align: center;
-    
-    color: #000000;
-    
-}
-
 .circle1{
   @include circle(#FB3B64);
   img{
     margin-left: 30px;
-
-  }
+    }
 }
-
-
 
 .numbers{
     @include numbers;
@@ -125,16 +63,13 @@ h3{
         margin-top: 14px;
     }
 }
-
-
 .circle3{
    @include circle(#55DFB4);
-   img{
-    margin-left: 31px;
-    margin-top: 6px;
-   }
+    img{
+        margin-left: 31px;
+        margin-top: 6px;
+    }
 }
-
 
 .benefits{
     @include benefits;
@@ -146,4 +81,37 @@ h3{
 
 .rectanglecolor{
     @include rectanglecolor
+}
+
+.price{
+    h2{
+        @include pricetitle
+    }
+    &__basic{
+        @include basic
+    }
+    .basic_title{
+        @include basictitle;
+        &__amount{
+            @include basicamount
+        }
+        
+    }
+   
+    .container-list{
+        @include container-list;
+        &__ul{
+            @include container-list-ul;
+        }
+        .list{
+            @include list
+        }
+
+    }
+    &__btnbegin{
+        @include pricebtnbegin
+    }
+        &__p{
+            @include priceparagraph
+        }
 }

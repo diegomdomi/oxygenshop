@@ -8,6 +8,57 @@
   src: url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
   font-display: swap; }
 
+.nav {
+  width: 375px;
+  height: 70px;
+  left: 0px;
+  top: 0px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29); }
+  .nav__menu {
+    display: inline; }
+  .nav img {
+    width: 20px;
+    height: 12px;
+    left: 325px;
+    top: 29px;
+    margin-left: 94px;
+    margin-top: 34px; }
+
+h3 {
+  width: 303px;
+  height: 112px;
+  left: 36px;
+  top: 714px;
+  margin-top: 13px;
+  margin-left: 36px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  /* or 117% */
+  text-align: center;
+  color: #000000; }
+
+.btn {
+  width: 310px;
+  height: 67px;
+  left: 0px;
+  top: 0px;
+  margin-top: 148px;
+  margin-left: 33px;
+  background: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  border-radius: 40px; }
+
+.background {
+  width: 779px;
+  height: 267px;
+  left: -201.5px;
+  top: 434px;
+  margin-top: 51px; }
+
 .section {
   width: 375px;
   height: 1395.66px;
@@ -36,23 +87,6 @@
 
 body {
   min-width: 320px; }
-
-.nav {
-  width: 375px;
-  height: 70px;
-  left: 0px;
-  top: 0px;
-  background: #FFFFFF;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29); }
-  .nav__menu {
-    display: inline; }
-  .nav img {
-    width: 20px;
-    height: 12px;
-    left: 325px;
-    top: 29px;
-    margin-left: 94px;
-    margin-top: 34px; }
 
 h1 {
   font-family: Raleway;
@@ -112,40 +146,6 @@ h4 {
   text-align: center;
   color: #000000; }
 
-.btn {
-  width: 310px;
-  height: 67px;
-  left: 0px;
-  top: 0px;
-  margin-top: 148px;
-  margin-left: 33px;
-  background: #08A6E4;
-  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-  border-radius: 40px; }
-
-.background {
-  width: 779px;
-  height: 267px;
-  left: -201.5px;
-  top: 434px;
-  margin-top: 51px; }
-
-h3 {
-  width: 303px;
-  height: 112px;
-  left: 36px;
-  top: 714px;
-  margin-top: 13px;
-  margin-left: 36px;
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 35px;
-  /* or 117% */
-  text-align: center;
-  color: #000000; }
-
 .circle1 {
   width: 62.71px;
   height: 62.71px;
@@ -170,7 +170,6 @@ h3 {
   font-weight: 800;
   font-size: 20px;
   line-height: 24px;
-  /* identical to box height, or 120% */
   text-align: center;
   letter-spacing: 5.96px;
   color: #000000; }
@@ -189,7 +188,6 @@ h3 {
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
-  /* identical to box height, or 118% */
   text-align: center;
   color: #A5A5A5; }
 
@@ -350,3 +348,101 @@ h3 {
     left: 0px;
     top: 315.64px;
     margin-top: 24px; }
+
+.price h2 {
+  position: relative;
+  width: 114px;
+  height: 42px;
+  left: 131px;
+  top: 53px;
+  margin: 0px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000; }
+
+.price__basic {
+  display: inline-block;
+  position: relative;
+  width: 293px;
+  height: 251px;
+  left: 41px;
+  top: 70px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #FB3B64;
+  border-radius: 18px; }
+
+.price .basic_title {
+  position: relative;
+  width: 52px;
+  height: 24px;
+  left: 50px;
+  top: 70px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #13253B; }
+  .price .basic_title__amount {
+    position: relative;
+    display: inline;
+    width: 59px;
+    height: 64px;
+    left: 45px;
+    top: 95px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 46px;
+    line-height: 64px;
+    color: #FB3B64; }
+
+.price .container-list {
+  position: relative;
+  bottom: 25px; }
+  .price .container-list__ul {
+    position: relative;
+    left: 168px;
+    top: auto;
+    bottom: 40px; }
+  .price .container-list .list {
+    width: fit-content;
+    height: 19px;
+    left: 21px;
+    top: 0px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000; }
+
+.price__btnbegin {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  right: 185px;
+  left: 110px;
+  top: 30px;
+  background: #EB476E;
+  border: none;
+  border-radius: 23px; }
+
+.price__p {
+  display: inline;
+  width: 37px;
+  height: 18px;
+  left: 57px;
+  top: 16px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  color: #FFFFFF; }
