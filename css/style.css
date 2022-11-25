@@ -559,3 +559,31 @@ h4 {
   font-size: 13px;
   line-height: 18px;
   color: #FFFFFF; }
+
+.cuestion_title {
+  position: relative;
+  top: 55px;
+  margin-left: 0px;
+  width: 280px;
+  height: 47px;
+  left: 30px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000; }
+
+.cuestion_coments {
+  position: relative;
+  display: inline;
+  top: 50px;
+  left: 45px;
+  width: 312px;
+  height: 22px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000; }

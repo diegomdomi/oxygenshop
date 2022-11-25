@@ -12,6 +12,7 @@
 @import "base/macbook";
 @import "base/iphone";
 @import "base/price";
+@import "base/cuestions";
 
 
 * {
@@ -148,4 +149,11 @@ h4{
     &__p{
         @include priceparagraph
     }
+}
+
+.cuestion_title{
+    @include cuestiontitle;
+}
+.cuestion_coments{
+    @include coments
 }
