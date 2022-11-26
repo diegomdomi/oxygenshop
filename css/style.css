@@ -80,6 +80,9 @@ h3 {
   top: 19.01px;
   z-index: 1; }
 
+.price {
+  width: 375px; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -560,7 +563,7 @@ h4 {
   line-height: 18px;
   color: #FFFFFF; }
 
-.cuestion_title {
+.contact__title {
   position: relative;
   top: 55px;
   margin-left: 0px;
@@ -574,7 +577,7 @@ h4 {
   line-height: 47px;
   color: #000000; }
 
-.cuestion_coments {
+.contact__coments {
   position: relative;
   display: inline;
   top: 50px;
@@ -587,3 +590,62 @@ h4 {
   font-size: 16px;
   line-height: 22px;
   color: #000000; }
+
+.contact__infoemail {
+  position: relative;
+  top: 120px;
+  display: inline;
+  margin-top: 0px;
+  right: 230px;
+  width: 145px;
+  height: 22px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #A5A5A5; }
+
+.contact__infophone {
+  position: relative;
+  top: 120px;
+  display: inline;
+  margin-top: 0px;
+  right: 230px;
+  width: 145px;
+  height: 22px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #A5A5A5;
+  display: inline-block;
+  top: 137px;
+  left: 33px; }
+
+.contact .form-contact {
+  position: relative;
+  width: 312px;
+  height: 157px;
+  left: 30px;
+  top: 193px; }
+  .contact .form-contact__label {
+    position: relative;
+    top: 41px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 3.28px;
+    color: #08A6E4; }
+
+#input-name {
+  position: relative;
+  width: 312px;
+  height: 0px;
+  left: 0px;
+  top: 56.98px;
+  margin-top: 41px;
+  border: 1px solid #95989A; }

@@ -151,9 +151,36 @@ h4{
     }
 }
 
-.cuestion_title{
-    @include cuestiontitle;
+.contact{
+    &__title{
+        @include cuestiontitle;
+    }
+    &__coments{
+        @include coments
+    }
+    &__infoemail{
+        @include infocontact
+    }
+    &__infophone{
+        @include infocontact;
+        display: inline-block;
+        top: 137px;
+        left: 33px;
+    }
+    .form-contact{
+        @include contactform;
+        &__label{
+            @include labelform;
+        }
+    }
 }
-.cuestion_coments{
-    @include coments
+#input-name{
+    position: relative;
+    width: 312px;
+    height: 0px;
+    left: 0px;
+    top: 56.98px;
+    margin-top: 41px;
+
+    border: 1px solid #95989A;
 }
