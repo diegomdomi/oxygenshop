@@ -1,3 +1,4 @@
+
 @import "base/fonts";
 @import "base/nav";
 @import "base/h1";
@@ -13,6 +14,8 @@
 @import "base/iphone";
 @import "base/price";
 @import "base/cuestions";
+@import "base/footer";
+// @use 'footer';
 
 
 * {
@@ -22,7 +25,7 @@
 }
 
 body {
-   min-width: 320px;
+    min-width: 320px;
 }
 
 h1 {
@@ -37,10 +40,16 @@ h4{
 }
 
 .main{
+  &__content{
+    margin-top:100px;
+    text-align:center;
+  }  
   &__title{
     @include title;
   } 
 }
+.popular-content{
+    text-align:-webkit-center;
 
 .circle1{
   @include circle(#FB3B64);
@@ -71,36 +80,60 @@ h4{
         margin-top: 6px;
     }
 }
-
-.benefits{
-    @include benefits;
 }
 
-.benefits3{
-    @include benefits3
-}
-
-.rectanglecolor{
-    @include rectanglecolor
-}
 
 .price{
     h2{
-        @include pricetitle
-    }
-    &__basic1{
-        @include basic(#FB3B64,293px,251px)
-    }
-    &__basic2{
-        @include basic(#07ACE6,339px,277px);
-        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-        left:18px;
+        @include pricetitle;
       
     }
     
-    &__basic3{
-        @include basic( #55DFB4,293px,251px)
+    &__basic1{
+        @include basic(#fb3b64);
     }
+    &__basic1:hover{
+       @include pricing-hover(#fb3b64);
+       .container-list__ul{
+        left:190px;
+        transform: scale(1.05);
+        transition: transform 0.5s ease-in-out;
+       }
+       .price__btnbegin1{
+        top: 45px;
+        right: 35px;
+       }
+    }
+    &__basic2{
+        @include basic(#07ACE6);
+    }
+    &__basic2:hover{
+        @include pricing-hover(#07ACE6);
+        .container-list__ul{
+            left:190px;
+            transform: scale(1.05);
+            transition: transform 0.5s ease-in-out;
+           }
+        .price__btnbegin2{
+            top: 45px;
+            right: 35px;
+           }
+     }
+    &__basic3{
+        @include basic( #55DFB4)
+    }
+    &__basic3:hover{
+        @include pricing-hover(#55DFB4);
+        .container-list__ul{
+            left:190px;
+            transform: scale(1.05);
+            transition: transform 0.5s ease-in-out;
+           }
+        .price__btnbegin3{
+            top: 45px;
+            right: 35px;
+           }
+     }
 
     .basic_title{
         @include basictitle;
@@ -111,13 +144,16 @@ h4{
             @include basicamount(#07ACE6);
         }
         &__amount3{
-            @include basicamount(#55DFB4)
+            @include basicamount(#55DFB4);
+
         }
         
     }
     .basic_title2{
         @include basictitle;
-        left:30px;
+    }
+    .basic_title3{
+        @include basictitle;
     }
     .small{
         @include small
@@ -128,6 +164,10 @@ h4{
         &__ul{
             @include container-list-ul;
         }
+        &__ul2{
+            @include container-list-ul;
+           
+        }
         .list{
             @include list;
           
@@ -137,21 +177,30 @@ h4{
     &__btnbegin1{
         @include pricebtnbegin(#FB3B64)
     }
+
     &__btnbegin2{
         @include pricebtnbegin(#07ACE6);
-        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-        bottom: 10px;
-        left: 90px;
+      
     }
     &__btnbegin3{
         @include pricebtnbegin(#55DFB4)
     }
     &__p{
-        @include priceparagraph
+        @include priceparagraph-btn
     }
 }
 
 .contact{
+    width: 80%;
+    margin: auto;
+    margin-top:50px;
+    .contact-content_titles{
+        margin-bottom:40px;
+    }
+    .contact-content_email-phone{
+        margin-bottom:40px;
+    }
+
     &__title{
         @include cuestiontitle;
     }
@@ -159,28 +208,64 @@ h4{
         @include coments
     }
     &__infoemail{
-        @include infocontact
+        @include infocontact;
+        img{
+            margin-right: 10px;
+        }
     }
     &__infophone{
         @include infocontact;
-        display: inline-block;
-        top: 137px;
-        left: 33px;
+        margin-top: 17px;
+        img{
+            margin-right: 5px;
+        }
     }
     .form-contact{
         @include contactform;
         &__label{
             @include labelform;
+        };
+        &__label_email{
+            @include labelform;
+            top:82px;
+        }
+        #input-name{
+            @include input
+        };
+        #input-email{
+            @include input(122px)
+        }
+
+    }
+    .form-contact-policy{
+        margin-top: 200px;
+
+    }
+    .check{
+        @include check;
+    }
+    .label-data-protection{
+        position: relative;
+        bottom: 25px;
+    }
+    .data-protection{
+        @include data-protection
+    }
+    .btn-submit-container{
+        @include btn-submit-container;
+        &__button{
+            @include btn-submit
         }
     }
 }
-#input-name{
-    position: relative;
-    width: 312px;
-    height: 0px;
-    left: 0px;
-    top: 56.98px;
-    margin-top: 41px;
 
-    border: 1px solid #95989A;
+@media only screen and (min-width: 1000px) {
+    .nav{
+        &__list{
+            display:inline-block;
+        }
+        img{
+            display:none;
+        }
+    }
 }

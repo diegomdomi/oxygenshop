@@ -1,10 +1,6 @@
+
 @mixin cuestiontitle{
-    position: relative;
-    top: 55px;
-    margin-left: 0px;
-    width: 280px;
-    height: 47px;
-    left: 30px;
+    margin-bottom: 5px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -14,54 +10,31 @@
 }
 
 @mixin coments{
-    position: relative;
-    display: inline;
-    top: 50px;
-    left: 45px;
-    width: 312px;
-    height: 22px;
-   
-
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
-
     color: #000000;
 }
 
 @mixin infocontact{
-    position: relative;
-    top: 120px;
-    display: inline;
-    margin-top: 0px;
-    right: 230px;
-    width: 145px;
-    height: 22px;
-
+  
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-
-
     color: #A5A5A5;
 }
 
 @mixin contactform{
-    position: relative;
-    width: 312px;
-    height: 157px;
-    left: 30px;
-    top: 193px;
+    margin-top: 56px;
 
 }
 
 @mixin labelform{
     position: relative;
-    top: 41px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 600;
@@ -69,4 +42,62 @@
     line-height: 15px;
     letter-spacing: 3.28px;
     color: #08A6E4; 
+}
+
+@mixin input($top:41px){
+    position: relative;
+    width: 90%;
+    height: 0px;
+    left: 0px;
+    top: $top;
+
+    border: 1px solid #95989A;
+}
+
+@mixin data-protection{
+    position: relative;
+    bottom: 25px;
+    margin-left: 55px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #707070;
+}
+
+@mixin check{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #95989A;
+    border-radius: 4px;
+    accent-color:rgb(255, 255, 255);
+
+}
+@mixin btn-submit-container{
+    width: 60%;
+    margin: auto;
+}
+@mixin btn-submit{
+    width: 226px;
+    height: 57px;
+    background: #08A6E4;
+    box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+    border-radius: 35px;
+    border:none;
+    .btn-submit__send{
+        position: relative;
+        width: 32px;
+        height: 18px;
+        left: 97px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 18px;
+        color: #FFFFFF;
+    }
+
 }

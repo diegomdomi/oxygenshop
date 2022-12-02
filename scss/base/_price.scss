@@ -1,14 +1,23 @@
 .price{
-    width: 375px;   
+    text-align: center;
+    &__content{
+        width: 90%;
+        margin: auto;
+        margin-top: 25px;
+    } 
+    &__title-content{
+        width: 40%;
+        display: inline-block;
+        position: relative;
+        bottom: 25px;
+    }
+   
 }
 
 @mixin pricetitle{
-    position: relative;
-    width: 114px;
-    height: 42px;
-    left: 131px;
-    top: 53px;
-    margin: 0px ;
+    margin: auto ;
+    margin-top:53px;
+    margin-bottom: 50px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -19,40 +28,31 @@
 
 }
 
-@mixin basic($color,$width,$height) {
-    display: inline-block;
-    position: relative;
-    width: $width;
-    height: $height;
-    left: 41px;
-    top: 70px;
-    margin: 0 auto;
+@mixin basic($color) {
+    margin-bottom: 54px;
     background: #FFFFFF;
     border: 1px solid $color;
     border-radius: 18px;
+}
+@mixin basic-titlecontent{
+    width: 40%;
+    display: inline-block;
+ 
 }
 
 @mixin pricebtnbegin($color) {
     position: relative;
     width: 150px;
     height: 50px;
-    right: 185px;
-    left: 70px;
-    top: auto;
-    bottom: 35px;
+    top: 15px;
 
     background: $color;
     border:none;
     border-radius: 23px;
 }
 
-@mixin priceparagraph{
+@mixin priceparagraph-btn{
     display: inline;
-    width: 37px;
-    height: 18px;
-    left: 57px;
-    top: 16px;
-
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -64,85 +64,57 @@
 }
 
 @mixin basictitle {
-    position: relative;
-    width: 52px;
-    height: 24px;
-    left: 50px;
-    top: 70px;
-
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
-
-
     color: #13253B;
 }
 
 @mixin basicamount($color){
-    position: relative;
-    display: inline;
-    width: 59px;
-    height: 64px;
-    left: 45px;
-    top: 70px;
-
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
     font-size: 46px;
     line-height: 64px;
-
-
     color: $color;
 }
 
 
 
 @mixin container-list{
-    position:relative;
-    bottom:25px;
+    display: inline-block;
+    width: 45%;
+    margin-top: 45px;
+    margin-bottom: 25px;
 }
 
 @mixin container-list-ul{
-    position: relative;
-    left: 168px;
-    top: auto;
-    bottom: 40px;
+
 }
 
 @mixin list{
-    position: relative;
-    right: 10px;
-    width: fit-content;
-    // display: block;
-    height: 19px;
-    top: 0px;
+    width: max-content;
     margin-bottom: 20px;
+    text-align: initial;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
     list-style-type: none;
-    text-align: center;
 
     color: #000000;
 
      img{
-        position: relative;
-        right: 13px;
+        padding-right: 13px;
+   
     }
 }
 
 @mixin small{
-    position: relative;
-    top: 90px;
-    left: auto;
-    right: 35px;
-    width: 74px;
-    height: 14px;
+
 
     font-family: 'Raleway';
     font-style: normal;
@@ -152,4 +124,12 @@
 
 
     color: #13253B;
+}
+
+@mixin pricing-hover($color){
+    background: #FFFFFF;
+    border: 1px solid $color;
+    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+    border-radius: 18px;
+
 }

@@ -1,10 +1,16 @@
 .iphone{
-    position: relative;
-    margin: auto;
-    width: 175px;
-    height: 134.99px;
-    left: 90px;
-    top: 19.01px;
-    z-index: 1;
+    // position: relative;
+    // margin: auto;
+    // width: 175px;
+    // height: 134.99px;
+    // left: 90px;
+    // top: 19.01px;
+    // z-index: 1;
 
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }

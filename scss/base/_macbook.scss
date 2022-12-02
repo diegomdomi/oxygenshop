@@ -1,7 +1,8 @@
 .macbook{
-    position: relative;
-    margin: auto;
-    top: 37px;
-    left: 55px;
+    position: absolute;
     z-index: 1;
+    margin: auto;
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }

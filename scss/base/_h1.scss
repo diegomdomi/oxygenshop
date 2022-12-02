@@ -1,16 +1,10 @@
-@mixin h1($font-family){
-    font-family: $font-family;
+@mixin h1($font-family,$top:0px){
     display: inline;
-    width: 206px;
-    height: 37px;
-    margin-left: 25px;
-    top: 17px;
-
+    top:$top;
+    // margin-left: 25px;
+    font-family: $font-family;
     font-style: normal;
     font-weight: 300;
     font-size: 32px;
-    line-height: 37px;
-
-
     color: #08A6E4;
 }
