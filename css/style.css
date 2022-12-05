@@ -21,10 +21,15 @@ header {
   margin-top: 17px; }
 
 .nav__burger-menu {
-  width: 10%;
-  display: inline-block; }
+  display: inline-block;
+  padding-left: 10%; }
 
 .nav__list {
+  margin-left: 60%;
+  position: relative;
+  bottom: 25px; }
+
+.nav li {
   display: none; }
 
 h3 {
@@ -32,6 +37,7 @@ h3 {
   margin: auto;
   width: 80%;
   margin-top: 13px;
+  margin-bottom: 30px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 300;
@@ -66,7 +72,7 @@ h3 {
   background: #F7F7F7;
   padding-bottom: 45px; }
   .section__content {
-    width: 85%;
+    width: 80%;
     margin: auto;
     margin-top: 42px;
     padding: 42px 0; }
@@ -386,8 +392,7 @@ h4 {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out; }
   .price__basic1:hover .price__btnbegin1 {
-    top: 45px;
-    right: 35px; }
+    top: 25px; }
 
 .price__basic2 {
   margin-bottom: 54px;
@@ -405,8 +410,7 @@ h4 {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out; }
   .price__basic2:hover .price__btnbegin2 {
-    top: 45px;
-    right: 35px; }
+    top: 25px; }
 
 .price__basic3 {
   margin-bottom: 54px;
@@ -424,8 +428,7 @@ h4 {
     transform: scale(1.05);
     transition: transform 0.5s ease-in-out; }
   .price__basic3:hover .price__btnbegin3 {
-    top: 45px;
-    right: 35px; }
+    top: 25px; }
 
 .price .basic_title {
   font-family: 'Raleway';
@@ -576,7 +579,7 @@ h4 {
     color: #A5A5A5;
     margin-top: 17px; }
     .contact__infophone img {
-      margin-right: 5px; }
+      margin-right: 0.4rem; }
   .contact .form-contact {
     margin-top: 56px; }
     .contact .form-contact__label {
@@ -635,8 +638,7 @@ h4 {
     line-height: 16px;
     color: #707070; }
   .contact .btn-submit-container {
-    width: 60%;
-    margin: auto; }
+    margin-left: 30%; }
     .contact .btn-submit-container__button {
       width: 226px;
       height: 57px;
@@ -657,7 +659,88 @@ h4 {
         color: #FFFFFF; }
 
 @media only screen and (min-width: 1000px) {
-  .nav__list {
-    display: inline-block; }
   .nav img {
-    display: none; } }
+    display: none; }
+  .nav__list ul {
+    display: flex;
+    justify-content: space-around; }
+  .nav__list li {
+    display: flex;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 3.28px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #08a6e4;
+    line-height: 2.5rem;
+    color: #A5A5A5; }
+  .popular-container {
+    display: flex;
+    justify-content: space-evenly; }
+  .section__content {
+    width: 70%; }
+    .section__content .benefits {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center; }
+    .section__content .benefits__container-img {
+      height: 20.75rem; }
+      .section__content .benefits__container-img .macbook {
+        position: inherit; }
+      .section__content .benefits__container-img .benefits__background {
+        bottom: 30%;
+        width: 150px;
+        height: 150px; }
+    .section__content .benefits__lorem1::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: -10px;
+      height: 0px;
+      width: 70%;
+      border-bottom: 4px solid #FB3B64; }
+  .price__content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%; }
+    .price__content .price__basic1, .price__content .price__basic2, .price__content .price__basic3 {
+      display: flex;
+      flex-direction: column;
+      padding: 4%; }
+      .price__content .price__basic1 .price__title-content, .price__content .price__basic2 .price__title-content, .price__content .price__basic3 .price__title-content {
+        width: 100%;
+        bottom: auto; }
+      .price__content .price__basic1 .container-list, .price__content .price__basic2 .container-list, .price__content .price__basic3 .container-list {
+        margin-top: 45px;
+        margin-bottom: 0px; }
+      .price__content .price__basic1 .price__btnbegin1, .price__content .price__basic1 .price__btnbegin2, .price__content .price__basic1 .price__btnbegin3, .price__content .price__basic2 .price__btnbegin1, .price__content .price__basic2 .price__btnbegin2, .price__content .price__basic2 .price__btnbegin3, .price__content .price__basic3 .price__btnbegin1, .price__content .price__basic3 .price__btnbegin2, .price__content .price__basic3 .price__btnbegin3 {
+        top: 4.8rem; }
+    .price__content .price__basic1 .price__title-content {
+      padding-bottom: 18px; }
+  .contact {
+    display: flex;
+    max-width: 56rem; }
+  .contact-content {
+    min-width: 50%; }
+  .contact-content_email-phone {
+    display: flex;
+    gap: 1.5rem; }
+  .contact__infophone {
+    margin: 0; }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 1rem; }
+  .footer__titles {
+    margin-left: 0;
+    padding-left: 8.5rem; }
+  .footer__logos {
+    position: unset;
+    padding-right: 8.5rem;
+    padding-bottom: 1rem; } }
