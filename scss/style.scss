@@ -82,7 +82,7 @@ h4{
 }
 }
 
-
+/*****Pricing*****/
 .price{
     h2{
         @include pricetitle;
@@ -94,11 +94,9 @@ h4{
     }
     &__basic1:hover{
        @include pricing-hover(#fb3b64);
-       .container-list__ul{
         left:190px;
         transform: scale(1.05);
         transition: transform 0.5s ease-in-out;
-       }
        .price__btnbegin1{
         top: 25px;
        }
@@ -108,11 +106,9 @@ h4{
     }
     &__basic2:hover{
         @include pricing-hover(#07ACE6);
-        .container-list__ul{
             left:190px;
             transform: scale(1.05);
             transition: transform 0.5s ease-in-out;
-           }
         .price__btnbegin2{
             top: 25px;
            }
@@ -122,11 +118,9 @@ h4{
     }
     &__basic3:hover{
         @include pricing-hover(#55DFB4);
-        .container-list__ul{
             left:190px;
             transform: scale(1.05);
             transition: transform 0.5s ease-in-out;
-           }
         .price__btnbegin3{
             top: 25px;
            }
@@ -296,6 +290,14 @@ h4{
                 height: 150px;
             }
         }
+        .benefits__mytitle1{
+            padding-left: 0px;
+        }
+        .benefits__lorem1{
+            position: relative;
+            padding-bottom: 3.125rem;
+            padding-left: 0px;
+        }
         .benefits__lorem1::before{
             content: "";
             position: absolute;
@@ -304,6 +306,74 @@ h4{
             height: 0px;
             width: 70%;
             border-bottom: 4px solid #FB3B64;
+        }
+        .benefits2-responsive{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 10rem;
+            .benefits__mytitle2{
+                width: 15rem;
+                margin: 15px 0;
+                padding-left: 0px;
+            }
+            .benefits__container-img .iphone{
+                left: 5rem;
+            }
+            .benefits__background2{
+                width: 280px;
+                height: 280px;
+            }
+            .benefits__lorem2{
+                position: relative;
+                padding-bottom: 3.125rem;
+                padding-left: 0px;
+            }
+            .benefits__lorem2::before{
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: -10px;
+                height: 0px;
+                width: 70%;
+                border-bottom: 4px solid #08A6E4;;
+            }
+        }
+        .card3-responsive{
+            display: flex;
+            gap: 4rem;
+            background-color: transparent;
+            border: 0;
+            .benefits3-responsive{
+                background: white;
+                margin: 0;
+                padding: 2rem;
+                max-width: 100%;
+                border: 1px solid #e8e9ed;
+                border-radius: 5px;
+            }
+            .benefits3__lorem3{
+                position: relative;
+                padding-bottom: 3.125rem;
+                padding-left: 0px;
+            }
+            .benefits3__lorem3::before{
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: -10px;
+                height: 0px;
+                width: 70%;
+                border-bottom: 4px solid #55DFB4;;
+            }
+            .benefits3__mytitle3{
+                padding-left: 0px;
+            }
+            .rectanglecolor{
+                width: 60%;
+                border: 1px solid #e8e9ed;
+            }
         }
     }
   
@@ -317,7 +387,7 @@ h4{
         .price__basic1, .price__basic2, .price__basic3{
             display: flex;
             flex-direction: column;
-            padding: 4%;
+            padding: 4% 6%;
 
             .price__title-content{
                 width: 100%;
@@ -327,6 +397,12 @@ h4{
             .container-list{
                 margin-top: 45px;
                 margin-bottom: 0px;
+            }
+            .container-list__ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
             }
             .price__btnbegin1,.price__btnbegin2,.price__btnbegin3{
                 top:4.8rem;
@@ -341,6 +417,9 @@ h4{
     .contact{
         display:flex;
         max-width: 56rem;
+        .form-contact{
+            margin-top: 0px;
+        }
     }
     .contact-content{
         min-width: 50%;
@@ -352,6 +431,7 @@ h4{
     .contact__infophone{
         margin:0;
     }
+   
   
     .footer{
         display: flex;

@@ -365,6 +365,7 @@ h4 {
       margin-left: 31px;
       margin-top: 6px; }
 
+/*****Pricing*****/
 .price h2 {
   margin: auto;
   margin-top: 53px;
@@ -386,11 +387,10 @@ h4 {
   background: #FFFFFF;
   border: 1px solid #fb3b64;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-  border-radius: 18px; }
-  .price__basic1:hover .container-list__ul {
-    left: 190px;
-    transform: scale(1.05);
-    transition: transform 0.5s ease-in-out; }
+  border-radius: 18px;
+  left: 190px;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out; }
   .price__basic1:hover .price__btnbegin1 {
     top: 25px; }
 
@@ -404,11 +404,10 @@ h4 {
   background: #FFFFFF;
   border: 1px solid #07ACE6;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-  border-radius: 18px; }
-  .price__basic2:hover .container-list__ul {
-    left: 190px;
-    transform: scale(1.05);
-    transition: transform 0.5s ease-in-out; }
+  border-radius: 18px;
+  left: 190px;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out; }
   .price__basic2:hover .price__btnbegin2 {
     top: 25px; }
 
@@ -422,11 +421,10 @@ h4 {
   background: #FFFFFF;
   border: 1px solid #55DFB4;
   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-  border-radius: 18px; }
-  .price__basic3:hover .container-list__ul {
-    left: 190px;
-    transform: scale(1.05);
-    transition: transform 0.5s ease-in-out; }
+  border-radius: 18px;
+  left: 190px;
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out; }
   .price__basic3:hover .price__btnbegin3 {
     top: 25px; }
 
@@ -695,6 +693,12 @@ h4 {
         bottom: 30%;
         width: 150px;
         height: 150px; }
+    .section__content .benefits__mytitle1 {
+      padding-left: 0px; }
+    .section__content .benefits__lorem1 {
+      position: relative;
+      padding-bottom: 3.125rem;
+      padding-left: 0px; }
     .section__content .benefits__lorem1::before {
       content: "";
       position: absolute;
@@ -703,6 +707,62 @@ h4 {
       height: 0px;
       width: 70%;
       border-bottom: 4px solid #FB3B64; }
+    .section__content .benefits2-responsive {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10rem; }
+      .section__content .benefits2-responsive .benefits__mytitle2 {
+        width: 15rem;
+        margin: 15px 0;
+        padding-left: 0px; }
+      .section__content .benefits2-responsive .benefits__container-img .iphone {
+        left: 5rem; }
+      .section__content .benefits2-responsive .benefits__background2 {
+        width: 280px;
+        height: 280px; }
+      .section__content .benefits2-responsive .benefits__lorem2 {
+        position: relative;
+        padding-bottom: 3.125rem;
+        padding-left: 0px; }
+      .section__content .benefits2-responsive .benefits__lorem2::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        height: 0px;
+        width: 70%;
+        border-bottom: 4px solid #08A6E4; }
+    .section__content .card3-responsive {
+      display: flex;
+      gap: 4rem;
+      background-color: transparent;
+      border: 0; }
+      .section__content .card3-responsive .benefits3-responsive {
+        background: white;
+        margin: 0;
+        padding: 2rem;
+        max-width: 100%;
+        border: 1px solid #e8e9ed;
+        border-radius: 5px; }
+      .section__content .card3-responsive .benefits3__lorem3 {
+        position: relative;
+        padding-bottom: 3.125rem;
+        padding-left: 0px; }
+      .section__content .card3-responsive .benefits3__lorem3::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        height: 0px;
+        width: 70%;
+        border-bottom: 4px solid #55DFB4; }
+      .section__content .card3-responsive .benefits3__mytitle3 {
+        padding-left: 0px; }
+      .section__content .card3-responsive .rectanglecolor {
+        width: 60%;
+        border: 1px solid #e8e9ed; }
   .price__content {
     display: flex;
     justify-content: space-evenly;
@@ -710,13 +770,18 @@ h4 {
     .price__content .price__basic1, .price__content .price__basic2, .price__content .price__basic3 {
       display: flex;
       flex-direction: column;
-      padding: 4%; }
+      padding: 4% 6%; }
       .price__content .price__basic1 .price__title-content, .price__content .price__basic2 .price__title-content, .price__content .price__basic3 .price__title-content {
         width: 100%;
         bottom: auto; }
       .price__content .price__basic1 .container-list, .price__content .price__basic2 .container-list, .price__content .price__basic3 .container-list {
         margin-top: 45px;
         margin-bottom: 0px; }
+      .price__content .price__basic1 .container-list__ul, .price__content .price__basic2 .container-list__ul, .price__content .price__basic3 .container-list__ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap; }
       .price__content .price__basic1 .price__btnbegin1, .price__content .price__basic1 .price__btnbegin2, .price__content .price__basic1 .price__btnbegin3, .price__content .price__basic2 .price__btnbegin1, .price__content .price__basic2 .price__btnbegin2, .price__content .price__basic2 .price__btnbegin3, .price__content .price__basic3 .price__btnbegin1, .price__content .price__basic3 .price__btnbegin2, .price__content .price__basic3 .price__btnbegin3 {
         top: 4.8rem; }
     .price__content .price__basic1 .price__title-content {
@@ -724,6 +789,8 @@ h4 {
   .contact {
     display: flex;
     max-width: 56rem; }
+    .contact .form-contact {
+      margin-top: 0px; }
   .contact-content {
     min-width: 50%; }
   .contact-content_email-phone {

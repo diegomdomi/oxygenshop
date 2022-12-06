@@ -54,10 +54,7 @@
         top: 12px;
         background: #08A6E4;
     }
-    // &__container{
-    //     // width:85%;
-    //     // margin-top:45px;
-    // }
+  
     &__mytitle1{
         @include mytitle 
     } 
@@ -95,9 +92,6 @@
     }
     &__lorem3{
         @include lorem;
-        // padding-right: 20px;
-        // margin-left: 22px;
-        // margin-top: 50px;
     }
 }
 @mixin rectanglecolor{
@@ -110,10 +104,6 @@
     border-radius: 5px;
 
     img{
-        // width: 295.73px;
-        // height: 207.72px;
-        // left: 0px;
-        // top: 315.64px;
         margin-top: 24px;
     }
 }
