@@ -658,8 +658,8 @@ h4 {
         line-height: 18px;
         color: #FFFFFF; }
 
-/****Responsive-Design****/
 @media only screen and (min-width: 1000px) {
+  /****Nav-Responsive****/
   .nav img {
     display: none; }
   .nav__list {
@@ -687,6 +687,7 @@ h4 {
   .popular-container {
     display: flex;
     justify-content: space-evenly; }
+  /****Benefits-Responsive****/
   .section__content {
     width: 70%; }
     .section__content .benefits {
@@ -793,6 +794,7 @@ h4 {
         flex-wrap: wrap; }
     .price__content .price__basic1 .price__title-content {
       padding-bottom: 18px; }
+  /****Contact-Responsive****/
   .contact {
     display: flex;
     max-width: 56rem; }
@@ -805,6 +807,7 @@ h4 {
     gap: 1.5rem; }
   .contact__infophone {
     margin: 0; }
+  /****Footer-Responsive****/
   .footer {
     display: flex;
     flex-direction: row;
