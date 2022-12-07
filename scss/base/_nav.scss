@@ -22,24 +22,25 @@ header{
         margin-left: 60%;
         position: relative;
         bottom: 25px;
-    }li{
+    }.a-menu{
         display: none
     }
  
 }
 
 
-@mixin menu-li-desktop {
+@mixin menu-a-desktop {
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 3.28px;
+    text-transform: uppercase;
+    line-height: 2.5rem;
+    color: #A5A5A5;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 11px;
     line-height: 15px;
-    cursor: pointer;
-    text-align: center;
-    letter-spacing: 3.28px;
-    text-transform: uppercase;
-    border-bottom: 4px solid #08a6e4;
-    line-height: 2.5rem;
-    color: #A5A5A5;
+  
 }

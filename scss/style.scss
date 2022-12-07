@@ -31,7 +31,7 @@ body {
 h1 {
     @include h1(Raleway);
 }
-
+/****Main-page****/
 h2{
     @include h2(Raleway)
 }
@@ -95,7 +95,7 @@ h4{
     &__basic1:hover{
        @include pricing-hover(#fb3b64);
         left:190px;
-        transform: scale(1.05);
+        transform: scale(1.08);
         transition: transform 0.5s ease-in-out;
        .price__btnbegin1{
         top: 25px;
@@ -107,7 +107,7 @@ h4{
     &__basic2:hover{
         @include pricing-hover(#07ACE6);
             left:190px;
-            transform: scale(1.05);
+            transform: scale(1.08);
             transition: transform 0.5s ease-in-out;
         .price__btnbegin2{
             top: 25px;
@@ -119,7 +119,7 @@ h4{
     &__basic3:hover{
         @include pricing-hover(#55DFB4);
             left:190px;
-            transform: scale(1.05);
+            transform: scale(1.08);
             transition: transform 0.5s ease-in-out;
         .price__btnbegin3{
             top: 25px;
@@ -181,6 +181,7 @@ h4{
     }
 }
 
+/****Contact****/
 .contact{
     width: 80%;
     margin: auto;
@@ -249,21 +250,28 @@ h4{
         }
     }
 }
-
+/****Responsive-Design****/
 @media only screen and (min-width: 1000px) {
     .nav{
         img{
             display:none;
         }
-        &__list ul{
+        &__list{
             display:flex;
-            justify-content: space-around;
+            justify-content:space-around;
         }
-        &__list li{
+        .a-menu{
             display:flex;
-            @include menu-li-desktop
+            @include menu-a-desktop;
         }
-       
+        .a-menu:hover{
+            color:black;
+        }
+        .nav__list .a-menu:hover{
+            border-bottom: 4px solid #08a6e4;
+            padding-bottom: 25px;
+        }
+        
     }
     .popular-container{
         display:flex;
@@ -378,6 +386,7 @@ h4{
     }
   
 
+/****Pricing-Responsive****/
 
     .price__content{
         display: flex;
@@ -387,7 +396,7 @@ h4{
         .price__basic1, .price__basic2, .price__basic3{
             display: flex;
             flex-direction: column;
-            padding: 4% 6%;
+            padding: 4% 6% 5px ;
 
             .price__title-content{
                 width: 100%;
@@ -404,9 +413,7 @@ h4{
                 align-items: center;
                 flex-wrap: wrap;
             }
-            .price__btnbegin1,.price__btnbegin2,.price__btnbegin3{
-                top:4.8rem;
-            }
+           
         }
         .price__basic1 .price__title-content{
             padding-bottom: 18px;
