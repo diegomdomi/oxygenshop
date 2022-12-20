@@ -45,13 +45,14 @@
 }
 
 @mixin input($top:41px){
+    display:block;
     position: relative;
     width: 90%;
-    height: 0px;
     left: 0px;
     top: $top;
-
-    border: 1px solid #95989A;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #95989A;
 }
 
 @mixin data-protection{

@@ -292,6 +292,29 @@ h3 {
   .footer .logo-twitter {
     margin-right: 20px; }
 
+#scrollToTop {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  animation: fadeInRight 2s ease-in-out;
+  bottom: 100px;
+  right: 10px;
+  z-index: 99; }
+  #scrollToTop img {
+    width: 30px;
+    height: 30px; }
+  #scrollToTop :hover {
+    cursor: pointer;
+    transform: scale(1.09);
+    transition: transform 0.5s ease-in-out; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px); }
+  to {
+    opacity: 1; } }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -640,19 +663,23 @@ h4 {
       color: #08A6E4;
       top: 82px; }
     .contact .form-contact #input-name {
+      display: block;
       position: relative;
       width: 90%;
-      height: 0px;
       left: 0px;
       top: 41px;
-      border: 1px solid #95989A; }
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #95989A; }
     .contact .form-contact #input-email {
+      display: block;
       position: relative;
       width: 90%;
-      height: 0px;
       left: 0px;
       top: 122px;
-      border: 1px solid #95989A; }
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #95989A; }
   .contact .form-contact-policy {
     margin-top: 200px; }
   .contact .check {
@@ -858,4 +885,7 @@ h4 {
   .footer__logos {
     position: unset;
     padding-right: 8.5rem;
-    padding-bottom: 1rem; } }
+    padding-bottom: 1rem; }
+  #scrollToTop img {
+    width: 50px;
+    height: 50px; } }

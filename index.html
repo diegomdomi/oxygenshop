@@ -11,6 +11,9 @@
     <title>OXYGENShop</title>
 </head>
 <body>
+    <aside class="modal-popup" id="popup">
+        <div class="modal-popup__container"></div>
+    </aside>
     <header>
         <div class="nav">
             <div class="nav__scroll">
@@ -201,15 +204,15 @@
             </div>   
         </div>   
        <div class="form-contact">
-            <form>
+            <form action="">
                 <div> 
-                <label class="form-contact__label">NAME</label>
-                <input type="text" id="input-name"/>
+                    <label class="form-contact__label">NAME</label>
+                    <input type="text" id="input-name"></input>
                 </div>
                 <div> 
-                <label class="form-contact__label_email">EMAIL</label>
-                <input type="text" id="input-email"/>
-            </div>
+                    <label class="form-contact__label_email">EMAIL</label>
+                    <input type="text" id="input-email"></input>
+                </div>
             </form>
             <div class="form-contact-policy"> 
                 <input class="check" type="checkbox" id="check-data" >
@@ -226,13 +229,13 @@
                 </label>
             </div>
             <div class="btn-submit-container"> 
-                <button class="btn-submit-container__button">
+                <button class="btn-submit-container__button " type="submit" id="submit-js">
                     <p class="btn-submit__send">Send</p>
                 </button>
             </div>
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer" id="footer"> 
         <div class="footer__titles"> 
             <h1 class="footer__title">OXYGENShop</h1>
             <p class="footer__copyright">©2022 OXYGEN,All Rights Reserved</p>
