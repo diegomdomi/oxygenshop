@@ -315,6 +315,31 @@ h3 {
   to {
     opacity: 1; } }
 
+.modal-popup {
+  position: absolute; }
+  .modal-popup__container {
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 80px 20px;
+    width: 90%;
+    background-color: rgba(219, 116, 56, 0.8);
+    border-radius: 15px; }
+  .modal-popup__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: azure; }
+    .modal-popup__body p {
+      padding-top: 25px;
+      font-size: 25px;
+      font-family: Raleway;
+      text-align: center; }
+    .modal-popup__body img {
+      width: 35%; }
+
 * {
   box-sizing: border-box;
   margin: 0;

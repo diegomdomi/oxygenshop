@@ -1,13 +1,25 @@
+/*Mobil Menu*/
+
 const menuMobil = document.querySelector('.nav__menu');
+const menuOpenMobil = menuMobil.querySelector('.btn-open')
+const menuCloseMobil = document.querySelector('.btn-close');
+menuCloseMobil.style.display="none";
 
 function toggleMenu(e) {
-    document.querySelector( ".nav__list" ).classList.toggle("is_active");
-    e.preventDefault();
+  e.preventDefault();
+  let toggleMenuMobil =  document.querySelector( ".nav__list" ).classList.toggle("is_active");
+  if(toggleMenuMobil){
+    menuOpenMobil.style.display="none"
+    menuCloseMobil.style.display="inline-block"
+  }else{
+    menuOpenMobil.style.display="initial"
+    menuCloseMobil.style.display="none"
+
+  }
 }
 menuMobil.addEventListener('click', toggleMenu);
 
 /* Scroll Progressive */
-let scrollPositionHeight 
 
  window.addEventListener('scroll', function () {
     const scrollCurrentPossition= window.pageYOffset ;
@@ -17,6 +29,7 @@ let scrollPositionHeight
     const widthProgressive = document.querySelector('.nav__scroll__progressive')
     widthProgressive.style.width= `${scrollPositionHeight}%` ;
 });
+
 /* Button to top */
 //create div and img elemnts
 let newDiv = document.createElement("div");
@@ -66,6 +79,7 @@ userSubmitValidation.addEventListener("click",sendSubmit )
 function validationEmail(e){
   let inputEmail = e.target.value;
   let inputEmailValidation = regexValidation.test(inputEmail);
+  console.log(inputEmailValidation)
  userEmailValidation.style.borderBlockColor = (!inputEmailValidation ?  "red" : "green")
 }
 
@@ -101,7 +115,7 @@ async function sendForm(){
         },
       })
       const data = await result.json();
-      return data
+      console.log( data)
   }
   catch (err) {
     alert(`Sorry we have some problems with the form: ${err}`)

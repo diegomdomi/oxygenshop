@@ -11,9 +11,7 @@
     <title>OXYGENShop</title>
 </head>
 <body>
-    <aside class="modal-popup" id="popup">
-        <div class="modal-popup__container"></div>
-    </aside>
+
     <header>
         <div class="nav">
             <div class="nav__scroll">
@@ -24,7 +22,8 @@
             </div>
             <nav class="nav__burger-menu">
                 <div class="nav__menu">
-                    <img  src="./img/Menu.png">
+                     <img class="btn-open" src="./img/Menu.png">
+                    <img class="btn-close" src="./img/cerrar.png">
                 </div>
             </nav>
             <div class="nav__list ">
@@ -35,7 +34,18 @@
             </div>
         </div>
     </header>
-
+    <aside class="modal-popup" id="popup">
+        <div class="modal-popup__container">
+            <div class="modal-popup__body">
+                <p>Subscribe to our newsletter</p>
+                <div> 
+                    <input type="text" id="input-email" placeholder="Email"></input>
+                    <button>enviar</button>
+                </div>
+                <img class="newsletter-img" src="./img/newsletter.png">
+            </div>
+        </div>
+    </aside>
     <div class="main" id="main">
         <div class="main__content">
             <h2>Sell More!</h2>

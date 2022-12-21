@@ -1,0 +1,32 @@
+.modal-popup{
+    position: absolute;
+    &__container{
+        margin:0 auto;
+        margin-top: 25px;
+        padding: 80px 20px;
+        width: 90%;
+        // background-image:url("../img/5495619.jpg");
+        background-color:rgba(219, 116, 56,  0.8);
+        border-radius: 15px;
+        // transform: translate(-50%, -50%)
+        // opacity: 0.8;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:90%;
+        margin:auto;
+        border-radius:10px;
+        background-color: azure;
+        p{
+            padding-top: 25px;
+            font-size:25px;
+            font-family: Raleway;
+            text-align: center;
+        }
+        img{
+            width: 35%;
+        }
+    }
+}
