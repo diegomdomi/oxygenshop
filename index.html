@@ -36,15 +36,15 @@
     </header>
     <aside class="modal-popup" id="popup">
         <div class="modal-popup__container">
-            <div class="modal-popup__body">
-                <button class="modal-popup__body__close">X</button>
+            <div class="modal-popup__body" id="body-popup">
+                <button class="modal-popup__body__close" id="close-modal-btn">X</button>
                 <p>Subscribe to our newsletter</p>
                 <small>
                     Sing up for our weekly update and be the first to know about promotions and discounts!
                 </small>
-                <form> 
-                    <input type="text" id="input-email" placeholder="Email"></input>
-                    <button class="popup-send" >Sing me up</button>
+                <form class="form-newsletter"> 
+                    <input type="text" class="input-email" value="" placeholder="Email"></input>
+                    <button class="popup-send" type="submit">Sing me up</button>
                 </form>
                 <img class="newsletter-img" src="./img/newsletter.png">
             </div>
@@ -225,7 +225,7 @@
                 </div>
                 <div> 
                     <label class="form-contact__label_email">EMAIL</label>
-                    <input type="text" id="input-email"></input>
+                    <input type="text" id="input-email" class="input-email" value=""></input>
                 </div>
             </form>
             <div class="form-contact-policy"> 
