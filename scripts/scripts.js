@@ -93,6 +93,8 @@ userEmailValidation.forEach((element) => {
     }else{
       element.style.borderColor="red"
       element.style.color="red"
+      let toggleButtonModal =  document.querySelector( ".popup-send" ).classList.toggle("btn_no-active");
+      console.log(toggleButtonModal)
     }
   });
   return element
@@ -126,16 +128,21 @@ function sendSubmit() {
 const mainBody= document.getElementById('body-popup')
 const modalBody = document.getElementById("popup")
 const closeModalBtn = document.getElementById("close-modal-btn")
-let modalSubmit = document.querySelector(".form-newsletter")
+const modalSubmit = document.querySelector(".form-newsletter")
+let buttonModalSubmit = document.querySelector(".popup-send")
+buttonModalSubmit.disabled=true
+buttonModalSubmit.style.backgroundColor="#0e0f0f1a"
+buttonModalSubmit.style.cursor="default"
+window.addEventListener("load",onLoadTimer);
 
-// window.addEventListener("load",onLoadTimer);
-
-// function onLoadTimer() {
-//   setTimeout(
-//     ()=>{
-//       modalBody.style.display="block"
-// },5000)
-// }
+function onLoadTimer() {
+  setTimeout(
+    ()=>{
+    if(!localStorage.getItem("modalStatus"))
+      modalBody.style.display="block",
+      localStorage.setItem("modalStatus",true)
+    },5000)
+  }
 
 
 function closeModalWindow(){
@@ -143,8 +150,9 @@ function closeModalWindow(){
 }
 
 function openWithPercent(param){
-  if(param == 25 ){
+  if(param == 25 && !localStorage.getItem("modalStatus") ){
   modalBody.style.display="block"
+  localStorage.setItem("modalStatus",true)
   }
 }
 
