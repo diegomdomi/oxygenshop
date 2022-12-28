@@ -24,7 +24,6 @@ menuMobil.addEventListener('click', toggleMenu);
 
 /* Scroll Progressive */
 
-
 let postionScrollY = function scrollYAxis() {
   let scrollCurrentPossition= window.pageYOffset ;
   let bodyHeight = window.innerHeight //Wieport Height
@@ -77,13 +76,11 @@ let regexValidation =/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@
 
 let userNameValidation = document.getElementById('input-name');
 let userEmailValidation = document.querySelectorAll('.input-email');
-// let userEmailValidation = document.getElementById('input-email');
 let userCheckBoxValidation = document.getElementById('check-data')
 let userSubmitValidation = document.getElementById('submit-js');
 let inputEmail
 
 userNameValidation.addEventListener("input", validationName );
-// userEmailValidation.addEventListener("input", validationEmail );
 userSubmitValidation.addEventListener("click",sendSubmit )
 
 userEmailValidation.forEach((element) => {
@@ -102,10 +99,6 @@ userEmailValidation.forEach((element) => {
 });
 
 
-// function validationEmail(e){
-//   let inputEmail = e.target.value
-//   let inputEmailValidation = regexValidation.test(inputEmail);
-// }
 function validationName(e){
   let inputName = e.target.value
   let inputNameValidation = inputName.length >= 2 && inputName.length < 100
@@ -128,30 +121,6 @@ function sendSubmit() {
   }
 
 }
-
-// async function sendForm(){
-//   try{
-//     const result = await fetch('https://jsonplaceholder.typicode.com/posts', {
-//         method: 'POST',
-//         body: JSON.stringify({
-//           Name: `${userNameValidation.value}`,
-//           Email:`${inputEmail}`,
-//           // Email:`${userEmailValidation.value}`,
-          
-//         }),
-//         headers: {
-//           'Content-type': 'application/json; charset=UTF-8',
-//         },
-//       })
-//       const data = await result.json();
-//       console.log(data)
-//   }
-//   catch (err) {
-//     alert(`Sorry we have some problems with the form: ${err}`)
-//   }
-
-// }
-
 
 /*Modal Functionality*/
 const mainBody= document.getElementById('body-popup')
@@ -181,6 +150,7 @@ function openWithPercent(param){
 
 modalSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
+  userCheckBoxValidation.checked=true
   sendSubmit()
   closeModalWindow();
 });
