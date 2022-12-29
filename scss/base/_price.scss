@@ -114,22 +114,18 @@
 }
 
 @mixin small{
-
-
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 14px;
-
-
     color: #13253B;
 }
 
 @mixin pricing-hover($color){
     background: #FFFFFF;
     border: 1px solid $color;
-    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+    box-shadow: 5px 10px 27px $color;
     border-radius: 18px;
 
 }

@@ -229,10 +229,10 @@ const amount3 = document.querySelector('.amount3')
     amount3.innerText =`€ ${60 * currency2}`
     return currency2
   }else if(currency === "gbp"){
-    const currency3 = data.usd.gbp
-    amount1.innerText = 0
-    amount2.innerText = 25 * currency3 
-    amount3.innerText = 60 * currency3
+    const currency3 =( data.usd.gbp).toFixed(2)
+    amount1.innerText = `£ ${0}`
+    amount2.innerText = `£ ${25 * currency3} `
+    amount3.innerText = `£ ${60 * currency3}`
     return currency3
   }
 

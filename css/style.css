@@ -522,7 +522,7 @@ h4 {
 .price__basic1:hover {
   background: #FFFFFF;
   border: 1px solid #fb3b64;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  box-shadow: 5px 10px 27px #fb3b64;
   border-radius: 18px;
   left: 190px;
   transform: scale(1.08);
@@ -539,7 +539,7 @@ h4 {
 .price__basic2:hover {
   background: #FFFFFF;
   border: 1px solid #07ACE6;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  box-shadow: 5px 10px 27px #07ACE6;
   border-radius: 18px;
   left: 190px;
   transform: scale(1.08);
@@ -556,7 +556,7 @@ h4 {
 .price__basic3:hover {
   background: #FFFFFF;
   border: 1px solid #55DFB4;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+  box-shadow: 5px 10px 27px #55DFB4;
   border-radius: 18px;
   left: 190px;
   transform: scale(1.08);
