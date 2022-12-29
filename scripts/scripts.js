@@ -1,6 +1,6 @@
 // import sendForm  from "./services/apiCalls";
 const URL_FORM = "https://jsonplaceholder.typicode.com/posts";
-
+const URL_CURRENCIES = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
 /*Mobil Menu*/
 
 const menuMobil = document.querySelector('.nav__menu');
@@ -78,6 +78,7 @@ let userNameValidation = document.getElementById('input-name');
 let userEmailValidation = document.querySelectorAll('.input-email');
 let userCheckBoxValidation = document.getElementById('check-data')
 let userSubmitValidation = document.getElementById('submit-js');
+let buttonSendModal =  document.querySelector( ".popup-send" );
 let inputEmail
 
 userNameValidation.addEventListener("input", validationName );
@@ -86,15 +87,19 @@ userSubmitValidation.addEventListener("click",sendSubmit )
 userEmailValidation.forEach((element) => {
   element.addEventListener('input', (e) => {
     let inputEmailValidation = regexValidation.test(e.target.value);
+
     if(inputEmailValidation){
       element.style.borderColor="green"
-      element.style.color="grey"
+      element.style.color="black"
+      buttonSendModal.setAttribute("class", "btn_active")
+      buttonModalSubmit.disabled=false
       return inputEmail= e.target.value
     }else{
       element.style.borderColor="red"
       element.style.color="red"
-      let toggleButtonModal =  document.querySelector( ".popup-send" ).classList.toggle("btn_no-active");
-      console.log(toggleButtonModal)
+      buttonSendModal.setAttribute("class", "popup-send")
+      buttonModalSubmit.disabled=true
+      
     }
   });
   return element
@@ -113,10 +118,11 @@ function sendSubmit() {
     sendForm(URL_FORM,`${userNameValidation.value}`,`${inputEmail}`)
     userNameValidation.value = ''
     userNameValidation.style.borderColor = 'grey'
-    userEmailValidation.forEach(element =>{ 
-      element.value ="",
-      element.style.borderColor="grey"})
+    clearInputEmail()
     userCheckBoxValidation.checked = false
+    buttonSendModal.setAttribute("class", "popup-send")
+    buttonModalSubmit.disabled=true
+
     alert("enviado")
   }else {
     alert("Erro to Send")
@@ -130,9 +136,7 @@ const modalBody = document.getElementById("popup")
 const closeModalBtn = document.getElementById("close-modal-btn")
 const modalSubmit = document.querySelector(".form-newsletter")
 let buttonModalSubmit = document.querySelector(".popup-send")
-buttonModalSubmit.disabled=true
-buttonModalSubmit.style.backgroundColor="#0e0f0f1a"
-buttonModalSubmit.style.cursor="default"
+
 window.addEventListener("load",onLoadTimer);
 
 function onLoadTimer() {
@@ -144,9 +148,18 @@ function onLoadTimer() {
     },5000)
   }
 
+function clearInputEmail() {
+  userEmailValidation.forEach(element =>{ 
+    element.value ="",
+    element.style.borderColor="grey"})
+}
 
 function closeModalWindow(){
   modalBody.style.display="none"
+  buttonSendModal.setAttribute("class", "popup-send")
+  buttonModalSubmit.disabled=true
+  clearInputEmail()
+
 }
 
 function openWithPercent(param){
@@ -188,3 +201,42 @@ window.addEventListener("click",(e) => { (e.target !== mainBody && e.target === 
       alert(`Sorry we have some problems with the form: ${err}`)
     }
 }
+
+
+/*Currency Changes* */
+
+const currency = document.getElementById('currency')
+const amount1 = document.querySelector('.amount1')
+const amount2 = document.querySelector('.amount2')
+const amount3 = document.querySelector('.amount3')
+// console.log(amount1.innerText = 34);
+// console.log(currency.value);
+
+ const getCurrencies = async (url,currency) => {
+  const response = await fetch(url)
+  const data  = await response.json();
+
+  if(currency === "usd"){
+   const currency1 = (data.usd.usd).toFixed(2)
+   amount1.innerText = `$ ${0}`
+   amount2.innerText = `$ ${25 * currency1}`
+   amount3.innerText = `$ ${60 * currency1}`
+    return currency1
+  }else if(currency === "eur"){
+    const currency2 = (data.usd.eur).toFixed(2)
+    amount1.innerText =`€ ${0}`
+    amount2.innerText = `€ ${25 * currency2 }`
+    amount3.innerText =`€ ${60 * currency2}`
+    return currency2
+  }else if(currency === "gbp"){
+    const currency3 = data.usd.gbp
+    amount1.innerText = 0
+    amount2.innerText = 25 * currency3 
+    amount3.innerText = 60 * currency3
+    return currency3
+  }
+
+
+}
+ 
+currency.addEventListener("change",()=>getCurrencies(URL_CURRENCIES,currency.value))
