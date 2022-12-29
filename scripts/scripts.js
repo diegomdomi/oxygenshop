@@ -1,6 +1,7 @@
 // import sendForm  from "./services/apiCalls";
 const URL_FORM = "https://jsonplaceholder.typicode.com/posts";
 const URL_CURRENCIES = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
+
 /*Mobil Menu*/
 
 const menuMobil = document.querySelector('.nav__menu');
@@ -32,9 +33,7 @@ let postionScrollY = function scrollYAxis() {
   let scrollPositionHeight = (scrollCurrentPossition * 100) / (offsetHeight - bodyHeight)
   widthProgressive.style.width= `${scrollPositionHeight}%` ;
   openWithPercent(scrollPositionHeight.toFixed(0))
-
   return scrollPositionHeight
-
 }
 
 window.addEventListener('scroll', postionScrollY);
@@ -131,8 +130,8 @@ function sendSubmit() {
 }
 
 /*Modal Functionality*/
-const mainBody= document.getElementById('body-popup')
-const modalBody = document.getElementById("popup")
+const modalBody = document.querySelector("#popup")
+const mainBody= document.querySelector('#body-popup')
 const closeModalBtn = document.getElementById("close-modal-btn")
 const modalSubmit = document.querySelector(".form-newsletter")
 let buttonModalSubmit = document.querySelector(".popup-send")
@@ -179,7 +178,7 @@ modalSubmit.addEventListener("submit", (e) => {
 /*Close Modal*/
 closeModalBtn.addEventListener("click", closeModalWindow )
 window.addEventListener("keyup",(e)=>{ (e.key === 'Escape'&& closeModalWindow()) } )
-window.addEventListener("click",(e) => { (e.target !== mainBody && e.target === modalBody) && closeModalWindow()})
+window.addEventListener("click",(e)=>{ (e.target !== mainBody && e.target === modalBody) && closeModalWindow()})
 
  const sendForm = async ( url, name, email) => {
     
@@ -209,10 +208,8 @@ const currency = document.getElementById('currency')
 const amount1 = document.querySelector('.amount1')
 const amount2 = document.querySelector('.amount2')
 const amount3 = document.querySelector('.amount3')
-// console.log(amount1.innerText = 34);
-// console.log(currency.value);
 
- const getCurrencies = async (url,currency) => {
+ const currencyChange = async (url,currency) => {
   const response = await fetch(url)
   const data  = await response.json();
 
@@ -224,9 +221,9 @@ const amount3 = document.querySelector('.amount3')
     return currency1
   }else if(currency === "eur"){
     const currency2 = (data.usd.eur).toFixed(2)
-    amount1.innerText =`€ ${0}`
+    amount1.innerText = `€ ${0}`
     amount2.innerText = `€ ${25 * currency2 }`
-    amount3.innerText =`€ ${60 * currency2}`
+    amount3.innerText = `€ ${60 * currency2}`
     return currency2
   }else if(currency === "gbp"){
     const currency3 =( data.usd.gbp).toFixed(2)
@@ -236,7 +233,6 @@ const amount3 = document.querySelector('.amount3')
     return currency3
   }
 
-
 }
  
-currency.addEventListener("change",()=>getCurrencies(URL_CURRENCIES,currency.value))
+currency.addEventListener("change",()=>currencyChange(URL_CURRENCIES,currency.value))
