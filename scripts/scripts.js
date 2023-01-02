@@ -236,3 +236,60 @@ const amount3 = document.querySelector('.amount3')
 }
  
 currency.addEventListener("change",()=>currencyChange(URL_CURRENCIES,currency.value))
+
+/**Slider**/
+class Slider {
+  constructor(id){
+      this.showImage = 0;
+      console.log(this.showImage)
+      this.slider = document.querySelector(`.${id}`);
+      this.sliderContainer = document.querySelector(`.${id}__container`); 
+      this.sliderImg = document.querySelectorAll(`.${id}_img`); 
+      this.circles = document.querySelectorAll(`.${id}_circle`);
+      this.next = document.querySelector(`.${id} .slider__arrowNext`)
+      this.prev = document.querySelector(`.${id} .slider__arrowBefore`)
+
+      this.mainAction();
+      this.selected()
+      this.autoMoveSlider(2500);
+  }
+
+  nextImage(e) {
+    this.showImage += e;
+    if (this.showImage >= this.sliderImg.length) {
+      this.showImage = 0;
+      }
+      if (this.showImage < 0) {
+        this.showImage = this.sliderImg.length - 1
+      }
+      this.moveSlides(this.showImage);
+  }
+    
+
+  selected(){
+    for (let i = 0; i < this.circles.length; i++) {
+      this.circles[i].addEventListener("click", () => {
+        this.moveSlides(i);
+      });
+    }
+  }
+
+  moveSlides(e) {
+    for (let i = 0; i < this.sliderImg.length; i++) {
+    this.sliderImg[i].style.display = "none";
+    this.circles[i].classList.remove("selected-active");
+  }
+    this.sliderImg[e].style.display = "block";
+    this.circles[e].classList.add("selected-active");
+  }
+
+  mainAction(){
+    this.next.addEventListener('click', ()=>this.nextImage(1))
+    this.prev.addEventListener('click', ()=>this.nextImage(-1))
+  }
+  
+  autoMoveSlider(timer){
+    setInterval(()=>this.nextImage(1),timer);
+  }
+}
+new Slider('slider');

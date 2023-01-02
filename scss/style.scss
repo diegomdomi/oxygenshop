@@ -427,6 +427,21 @@ h4{
         }
     }
     
+    /****Slider-Responsive****/
+    .slider{
+        width: 800px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    .slider__arrowBefore {
+       left:55px;
+    }   
+    .slider__arrowNext {
+       right:55px;
+    }   
+    .slider__selected{
+        bottom: 100px;
+    }
     /****Contact-Responsive****/
     .contact{
         display:flex;

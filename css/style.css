@@ -389,21 +389,58 @@ h3 {
 
 .slider {
   position: relative;
-  margin: auto;
-  padding: 0 15px;
-  top: 15px;
+  display: flex;
+  flex-direction: column;
   width: 95%;
-  height: 300px;
-  background-color: #a5adad; }
-  .slider__container {
-    width: 100%;
-    height: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+  .slider__container img {
+    margin: 0 auto;
+    object-fit: contain;
+    width: 90%; }
+  .slider__container .slider_img {
+    display: none; }
+  .slider__container .slider_img-active {
+    display: block; }
+  .slider__arrowBefore {
+    position: absolute;
+    right: 6%;
+    cursor: pointer;
+    width: 30px;
+    background: aliceblue;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 6%; }
+    .slider__arrowBefore:hover {
+      left: 4%; }
+  .slider__arrowNext {
+    position: absolute;
+    right: 6%;
+    cursor: pointer;
+    width: 30px;
+    background: aliceblue;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    top: 50%; }
+    .slider__arrowNext:hover {
+      right: 4%; }
+  .slider__selected {
     display: flex;
-    overflow: hidden; }
-    .slider__container img {
-      margin: 0 auto;
-      object-fit: contain;
-      width: 90%; }
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5px;
+    position: relative;
+    bottom: 25px; }
+    .slider__selected .slider_circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background-color: rgba(164, 168, 163, 0.856); }
+    .slider__selected .selected-active {
+      background-color: #233d1c; }
 
 * {
   box-sizing: border-box;
@@ -951,6 +988,17 @@ h4 {
         flex-wrap: wrap; }
     .price__content .price__basic1 .price__title-content {
       padding-bottom: 18px; }
+  /****Slider-Responsive****/
+  .slider {
+    width: 800px;
+    height: 400px;
+    margin: 0 auto; }
+  .slider__arrowBefore {
+    left: 55px; }
+  .slider__arrowNext {
+    right: 55px; }
+  .slider__selected {
+    bottom: 100px; }
   /****Contact-Responsive****/
   .contact {
     display: flex;
