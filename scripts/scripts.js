@@ -1,6 +1,7 @@
 // import sendForm  from "./services/apiCalls";
 const URL_FORM = "https://jsonplaceholder.typicode.com/posts";
 const URL_CURRENCIES = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
+const regexValidation =/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 /*Mobil Menu*/
 
@@ -71,7 +72,6 @@ newDiv.addEventListener("click", function (e){
 displayButton();
 
 /** Form Validation **/
-let regexValidation =/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 let userNameValidation = document.getElementById('input-name');
 let userEmailValidation = document.querySelectorAll('.input-email');
@@ -220,13 +220,13 @@ const amount3 = document.querySelector('.amount3')
    amount3.innerText = `$ ${60 * currency1}`
     return currency1
   }else if(currency === "eur"){
-    const currency2 = (data.usd.eur).toFixed(2)
+    const currency2 = (data.usd.eur).toFixed(1)
     amount1.innerText = `€ ${0}`
     amount2.innerText = `€ ${25 * currency2 }`
     amount3.innerText = `€ ${60 * currency2}`
     return currency2
   }else if(currency === "gbp"){
-    const currency3 =( data.usd.gbp).toFixed(2)
+    const currency3 =( data.usd.gbp).toFixed(1)
     amount1.innerText = `£ ${0}`
     amount2.innerText = `£ ${25 * currency3} `
     amount3.innerText = `£ ${60 * currency3}`
@@ -241,9 +241,7 @@ currency.addEventListener("change",()=>currencyChange(URL_CURRENCIES,currency.va
 class Slider {
   constructor(id){
       this.showImage = 0;
-      console.log(this.showImage)
       this.slider = document.querySelector(`.${id}`);
-      this.sliderContainer = document.querySelector(`.${id}__container`); 
       this.sliderImg = document.querySelectorAll(`.${id}_img`); 
       this.circles = document.querySelectorAll(`.${id}_circle`);
       this.next = document.querySelector(`.${id} .slider__arrowNext`)
