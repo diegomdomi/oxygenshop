@@ -122,9 +122,9 @@ function sendSubmit() {
     buttonSendModal.setAttribute("class", "popup-send")
     buttonModalSubmit.disabled=true
 
-    alert("enviado")
+    alert("Form sent succes")
   }else {
-    alert("Erro to Send")
+    alert("Erro to Send Form")
   }
 
 }

@@ -273,6 +273,8 @@ h3 {
     position: relative;
     left: 70%;
     bottom: 40px; }
+    .footer__logos .a-ref {
+      text-decoration: none; }
   .footer__title {
     display: inline;
     top: 22px;

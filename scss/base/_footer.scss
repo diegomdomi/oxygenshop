@@ -7,6 +7,7 @@
 
     background: #F7F7F7;
     box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.2);
+    
     &__titles{
         padding-top: 22px;
         margin-left: 17px; 
@@ -16,7 +17,11 @@
         position: relative;
         left: 70%;
         bottom: 40px;
+        .a-ref {
+            text-decoration: none;
+        }
     }
+  
     &__title{
             @include h1(Raleway,22px);
             margin-left: auto;
@@ -30,10 +35,13 @@
         line-height: 15px;
         color: #A5A5A5;
     }
+    
     .logo-twitter{
-      margin-right: 20px;
+        margin-right: 20px;
     }
-  
+    
+ 
         
 
 }
+
